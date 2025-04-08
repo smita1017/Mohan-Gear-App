@@ -21,6 +21,8 @@ import Card2 from './Pages/Card2';
 import connection1 from './assets/connection1.png';
 import connection2 from './assets/connection2.png';
 import connection3 from './assets/connection3.png';
+import Awardingo from './Awardingo';
+import Form1 from './Pages/Form1';
 function App() {
   return (
     <>
@@ -138,7 +140,8 @@ function App() {
     <span className="text-red-400"> Make in India</span>" Award 2024
   </p>
 </div>
-
+<Awardingo />
+<Form1 />
     </>
   );
 }
