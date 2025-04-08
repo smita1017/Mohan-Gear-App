@@ -23,6 +23,7 @@ import connection2 from './assets/connection2.png';
 import connection3 from './assets/connection3.png';
 import Awardingo from './Awardingo';
 import Form1 from './Pages/Form1';
+import AboutUssection from './Pages/AboutUssection';
 function App() {
   return (
     <>
@@ -141,7 +142,10 @@ function App() {
   </p>
 </div>
 <Awardingo />
+<div className='flex items-center justify-center'>
 <Form1 />
+</div>
+<AboutUssection/> 
     </>
   );
 }
