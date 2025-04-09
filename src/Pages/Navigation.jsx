@@ -10,11 +10,11 @@ const Navigation = () => {
       {/* Top Bar */}
       <div className='flex items-center justify-center gap-4 bg-[#3A5652] h-12 md:gap-10 md:justify-around lg:gap-20'>
         <div className='flex items-center md:gap-2'>
-          <img src={Mailimg} alt="Mailimg" className='h-3' />
+          <img src={Mailimg} alt="Mailimg" className='h-3 md:h-5' />
           <p className='text-[9px] md:text-sm text-white font-medium'>mtg_gearin@yahoo.co.in</p>
         </div>
         <div className='flex items-center md:gap-2'>
-          <img src={Phoneimg} alt="Phoneimg" className='h-3' />
+          <img src={Phoneimg} alt="Phoneimg" className='h-3 md:h-5' />
           <p className='text-[9px] md:text-sm font-medium text-white'>08048775290</p>
         </div>
         <button className='bg-[#F9642A] text-white whitespace-nowrap px-1 py-1 text-[9px] md:text-sm rounded font-medium md:ml-6'>
