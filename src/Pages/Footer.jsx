@@ -2,6 +2,8 @@ import React from 'react';
 import footerImg from '../assets/footerimg.png';     // small top image
 import footerImg2 from '../assets/footerimg2.png';   // big bottom image
 import logo from '../assets/logo.png';
+import Logo_New from '../assets/Logo_New.png';
+import { Link } from 'react-router';
 
 const Footer = () => {
   return (
@@ -18,7 +20,7 @@ const Footer = () => {
     {/* Logo */}
     <div className="flex-shrink-0 ">
       <img 
-        src={logo} 
+        src={Logo_New} 
         alt="Logo" 
         className="w-32 sm:w-40 md:w-32 lg:w-52 h-auto object-contain" 
       />
@@ -54,12 +56,12 @@ const Footer = () => {
     {/* Company Links */}
     <div className="md:w-1/4 text-center md:text-center">
       <p className="text-lg font-semibold mb-2">Company</p>
-      <ul className="space-y-1 text-sm">
-        <li>Home</li>
-        <li>Product</li>
-        <li>About Us</li>
-        <li>Flip Book</li>
-        <li>Contact Us</li>
+      <ul className="flex flex-col items-center justify-center gap-1">
+      <Link to="/">Home</Link>
+        <Link to="/product">Product</Link>
+        <Link to="/company">Company</Link>
+        <Link to="/contact">Contact</Link>
+      <Link to="/flipbook">Flip Book</Link>
       </ul>
     </div>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Gear_img from './assets/Gear_img.png'
+import Gear_img from '../assets/Gear_img.png'
 const Awardingo = () => {
   return (
     <div className='w-full flex items-center justify-center flex-col p-2 md:flex-row'>

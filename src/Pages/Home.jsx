@@ -1,25 +1,24 @@
-import Navigation from './Pages/Navigation';
-import Header from './Pages/Header';
-import Card from './Pages/Card';
-import Nature_of_Buisness from './assets/Nature_of_Buisness.png';
-import Nature_of_Employee from './assets/Nature_of_Employee.png';
-import Nature_of_turnover from './assets/Nature_of_turnover.png';
+import Navigation from './Navigation';
+import Header from './Header';
+import Card from './Card';
+import Nature_of_Buisness from '../assets/Nature_of_Buisness.png';
+import Nature_of_Employee from '../assets/Nature_of_Employee.png';
+import Nature_of_turnover from '../assets/Nature_of_turnover.png';
 
-import Section4 from './Pages/section4';
-import MachineParts from './Pages/MachineParts';
-import Card2 from './Pages/Card2';
-import connection1 from './assets/connection1.png';
-import connection2 from './assets/connection2.png';
-import connection3 from './assets/connection3.png';
+import Section4 from './section4';
+import MachineParts from './MachineParts';
+import Card2 from './Card2';
+import connection1 from '../assets/connection1.png';
+import connection2 from '../assets/connection2.png';
+import connection3 from '../assets/connection3.png';
 import Awardingo from './Awardingo';
-import Form1 from './Pages/Form1';
-import AboutUssection from './Pages/AboutUssection';
-import Footer from './Pages/Footer';
-import Productitems from './Pages/Productitems';
+import Form1 from './Form1';
+import AboutUssection from './AboutUssection';
+import Footer from './Footer';
+import Productitems from './Productitems';
 function Home() {
   return (
     <>
-      <Navigation />
       <Header />
       <div className="flex flex-wrap justify-center gap-6 p-6 ">
         <Card
@@ -75,7 +74,6 @@ function Home() {
 </div>
 <AboutUssection/> 
 
-<Footer/>
     </>
   );
 }

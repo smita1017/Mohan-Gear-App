@@ -1,18 +1,16 @@
 import React from 'react'
-import Navigation from './Pages/Navigation'
-import Footer from './Pages/Footer'
+import Navigation from './Navigation'
+import Footer from './Footer'
 import OurProductHeaderSection from './OurProductHeaderSection'
-import Productitems from './Pages/Productitems'
-import Productsection from './Pages/Productsection'
+import Productitems from './Productitems'
+import Productsection from './Productsection'
 
 const Product = () => {
   return (
     <div>
-    <Navigation/>
     <OurProductHeaderSection/>
     <Productitems/>
     <Productsection/>
-    <Footer/>
     </div>
   )
 }
