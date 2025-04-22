@@ -59,9 +59,9 @@ const Product_template = () => {
 
             {/* Top Buttons */}
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="text-[#39615F] px-4 py-2 rounded shadow hover:bg-[#39615F] hover:text-white border-[#39615F]">Enter Quantity</button>
-              <button className="text-[#39615F] px-4 py-2 rounded shadow hover:bg-[#39615F] hover:text-white border-[#39615F]">Measurement Units</button>
-              <button className="text-[#39615F] px-4 py-2 rounded shadow hover:bg-[#39615F] hover:text-white border-[#39615F]">Get Best Price</button>
+              <button className="text-[#39615F] px-4 py-2 rounded shadow  border border-color[39615F] hover:bg-[#39615F] hover:text-white border-[#39615F]">Enter Quantity</button>
+              <button className="text-[#39615F] px-4 py-2 rounded shadow border border-color[39615F] hover:bg-[#39615F] hover:text-white border-[#39615F]">Measurement Units</button>
+              <button className="text-[#39615F] px-4 py-2 rounded shadow border border-color[39615F] hover:bg-[#39615F] hover:text-white border-[#39615F]">Get Best Price</button>
             </div>
 
             {/* Product Detail Entries */}
