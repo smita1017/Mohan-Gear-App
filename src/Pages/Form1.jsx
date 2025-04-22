@@ -9,8 +9,8 @@ const Form1 = () => {
       {/* LEFT SIDE: Contact Info */}
       <div className="flex items-center flex-col justify-center gap-2 bg-[#39615F] text-white p-7 sm:w-1/2 w-full rounded-md">
         <div className="flex items-center flex-col gap-4">
-          <h1 className="font-bold text-2xl">Find Us & Get in Touch</h1>
-          <h4 className="text-md">Mukund Trans-Gears</h4>
+          <h1 style={{"fontFamily":"judson"}} className="font-bold text-2xl">Find Us & Get in Touch</h1>
+          <h4 style={{"fontFamily":"judson"}} className="text-md">Mukund Trans-Gears</h4>
           </div>
           <div className="flex flex-col gap-4 mt-4">
           <div className="flex items-start gap-3">
@@ -39,10 +39,10 @@ const Form1 = () => {
       {/* RIGHT SIDE: Contact Form */}
       <div className="bg-white text-[#39615F] p-7 sm:w-1/2 w-full rounded-md">
         <div className="flex flex-col items-center justify-center gap-4 mb-4">
-          <h1 className="text-2xl font-bold text-center">
+          <h1 style={{"fontFamily":"judson"}} className="text-2xl font-bold text-center">
             We’re Excited to Hear from You
           </h1>
-          <h4 className="text-sm text-center">
+          <h4 style={{"fontFamily":"inter"}} className="text-sm text-center">
             Send us an email with your request, and we’ll get back to you
             within one business day!
           </h4>
@@ -92,7 +92,7 @@ const Form1 = () => {
       />
     </div>
   </div>
-
+    
   {/* Row 3 */}
   <div className="flex flex-col sm:flex-row gap-4">
     <div className="flex flex-col w-full">

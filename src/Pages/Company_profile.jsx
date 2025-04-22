@@ -7,12 +7,12 @@ import gif5 from '../assets/gif5.png'
 const Company_profile = () => {
   return (
     <div className='w-full flex flex-col items-center justify-center md:flex mt-2'>
-        <h1 className='text-2xl mb-10'>Company Profile</h1>
+        <h1  style={{"fontFamily":"judson"}} className='text-2xl mb-10 '>Company Profile</h1>
         <div className='bg-[#39615F] md:flex items-center justify-center gap-4 md:p-12 mb-8 rounded-xl text-white'>
             <div className='flex flex-col items-center justify-center gap-2 '>
                 <img src={gif1} alt="" className='h-12' />
-                <h1>Name of CEO</h1>
-                <p>Mr. Vinayak Mukund Talwalkar</p>
+                <h1 style={{"fontFamily":"judson"}}>Name of CEO</h1>
+                <p style={{"fontFamily":"judson"}}>Mr. Vinayak Mukund Talwalkar</p>
             </div>
             <div className='flex flex-col items-center justify-center gap-2 '>
                 <img src={gif2} alt="" className='h-12' />

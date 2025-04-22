@@ -6,15 +6,15 @@ import profile from "../assets/profile.png";
 const AboutUssection = () => {
   return (
     <div className="w-full h-full bg-[#B6C6C8] p-4 flex flex-col justify-center items-center gap-4 mt-10">
-      <h1 className="font-judon font-bold md:w-3/4 text-center text-xl md:text-3xl text-[#39615F] mt-10 p-4">
+      <h1 style={{"fontFamily":"judson"}} className="font-bold md:w-3/4 text-center text-xl md:text-3xl text-[#39615F] mt-10 p-4">
         Get To Know About Our <br /> Clients Voices
       </h1>
 
       {/* Testimonial Container */}
-      <div className="relative w-70 md:w-3/4 h-full p-4 bg-white rounded-md shadow-lg flex flex-col items-center gap-4 mt-10 md:rounded-lg">
+      <div className="relative w-full md:w-3/4 h-full md:p-4 bg-white rounded-md shadow-lg flex flex-col items-center gap-4 mt-10 md:rounded-lg">
 
         {/* Profile Image - Top Center */}
-        <div className="absolute -top-14 left-1/2 transform -translate-x-1/2  w-30 h-30 rounded-full overflow-hidden">
+        <div className="absolute -top-12 left-1/2 transform -translate-x-1/2  w-30 h-30 rounded-full overflow-hidden">
           <img src={profile} alt="profile pic" className="w-full h-full object-cover" />
         </div>
 

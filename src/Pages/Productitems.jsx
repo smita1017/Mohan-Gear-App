@@ -1,6 +1,6 @@
 import React from 'react'
 import MachineParts from './MachineParts'
-
+import { useNavigate } from 'react-router-dom';
 import img1 from '../assets/img1.png';
 import img2 from '../assets/img2.png';
 import img3 from '../assets/img3.png';
@@ -15,18 +15,21 @@ const Productitems = () => {
   return (
     <div className="flex flex-wrap justify-center gap-7 ">
     <MachineParts
+      id={1}
       img={img1}
       title="Industrial Sprockets"
       description ="High-quality sprockets for industrial applications."
       Clickname="View More"
      />
       <MachineParts
+        id={2}
       img={img2}
       title="Planetary Gearbox"
       description="Precision-engineered gearboxes for smooth power transmission."
       Clickname="View More"
      />
      <MachineParts
+       id={3}
       img={img3}
       title="Harmonic Drives"
       description="Reliable drives designed for accuracy and efficiency.."
@@ -34,12 +37,14 @@ const Productitems = () => {
      />
      
      <MachineParts
+       id={4}
       img={img4}
       title="Worm Gearbox"
       description="Durable and high-performance worm gear solutions.."
       Clickname="View More"
      />
       <MachineParts
+        id={5}
       img={img5}
       title="Bevel Planetary Drives"
       description="High-torque drives with advanced design."
@@ -47,12 +52,14 @@ const Productitems = () => {
      />
      
       <MachineParts
+        id={6}
       img={img6}
       title="Charging Pump"
       description="Sturdy and efficient pumps for various industrial uses."
       Clickname="View More"
      />
       <MachineParts
+        id={7}
       img={img7}
       title="Helical Gears"
       description="High-speed gears with excellent load capacity."
@@ -60,18 +67,21 @@ const Productitems = () => {
      />
       
       <MachineParts
+        id={8}
       img={img8}
       title="Aluminium Timing Pulleys"
       description="Lightweight, durable pulleys for smooth motion control."
       Clickname="View More"
      />
       <MachineParts
+        id={9}
       img={img9}
       title="Track Drives"
       description="Robust track drives for superior performance."
       Clickname="View More"
      />
       <MachineParts
+        id={10}
       img={img10}
       title="Winch Drives"
       description="Efficient winch drives for heavy-duty applications."
