@@ -5,45 +5,48 @@ import { productDetails_right } from './Product_details_right';
 import shareimg from '../assets/shareimg.png';
 import phone from '../assets/phone.png';
 import inuariry from '../assets/mail.png';
+import { extraDetails } from '../Pages/specification';
+import EnquiryForm from './EnquiryForm';
 
 const Product_template = () => {
   const { id } = useParams();
   const product = productImages.find((item) => item.id === parseInt(id));
   const details = productDetails_right[id] || [];
+  const sections = extraDetails[parseInt(id)];
 
   if (!product) {
     return <p className="text-center text-gray-500">Product not found.</p>;
   }
 
   return (
-    <div className='flex items-center gap-6 p-6'>
+    <div className='flex flex-col items-center gap-6 p-6 justify-center'>
       <div className='w-full'>
-        <div className='flex items-center justify-between'>
+        <div className='flex flex-col sm:flex-row items-center justify-between'>
           <h1 className="text-3xl text-center font-judson mb-4 w-full">
             {product.title}
           </h1>
-          <img src={shareimg} alt="share icon" />
+          <img src={shareimg} alt="share icon" className='w-6 h-6' />
         </div>
 
-        <div className='flex items-center justify-center h-full'>
+        <div className='flex flex-col lg:flex-row items-center justify-center h-full gap-6'>
           {/* Left Side - Images */}
-          <div className="p-4 w-1/2">
+          <div className="p-4 w-full lg:w-1/2 shadow h-auto">
             {!product.images ? (
               <p className="text-center text-gray-500">No images found for this product.</p>
             ) : (
-              <div className="flex flex-col items-center gap-4 justify-center">
+              <div className="flex flex-col items-center gap-10 justify-center">
                 <img
                   src={product.images[0]}
                   alt={`${product.title} - Main`}
                   className="w-3/4 h-auto rounded shadow"
                 />
-                <div className="flex justify-center gap-4">
+                <div className="flex flex-wrap justify-center gap-4">
                   {product.images.slice(1, 4).map((src, index) => (
                     <img
                       key={index}
                       src={src}
                       alt={`${product.title} - ${index + 2}`}
-                      className="w-full h-auto rounded shadow"
+                      className="w-24 h-auto rounded shadow"
                     />
                   ))}
                 </div>
@@ -52,10 +55,10 @@ const Product_template = () => {
           </div>
 
           {/* Right Side - Details */}
-          <div className='w-1/2 p-4 space-y-6'>
+          <div className='w-full lg:w-1/2 p-4 space-y-6'>
 
             {/* Top Buttons */}
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-wrap justify-center gap-4">
               <button className="text-[#39615F] px-4 py-2 rounded shadow hover:bg-[#39615F] hover:text-white border-[#39615F]">Enter Quantity</button>
               <button className="text-[#39615F] px-4 py-2 rounded shadow hover:bg-[#39615F] hover:text-white border-[#39615F]">Measurement Units</button>
               <button className="text-[#39615F] px-4 py-2 rounded shadow hover:bg-[#39615F] hover:text-white border-[#39615F]">Get Best Price</button>
@@ -66,16 +69,16 @@ const Product_template = () => {
               {details.map((item, index) => (
                 <div
                   key={index}
-                  className="p-3 text-black rounded flex items-start gap-6"
+                  className="p-3 text-black rounded flex sm:flex-row items-start gap-2 sm:gap-6"
                 >
-                  <span className="w-1/2 font-semibold truncate">{item.label}</span>
-                  <span className="w-1/2">{item.value}</span>
+                  <span className="w-full sm:w-1/2 font-semibold truncate">{item.label}</span>
+                  <span className="w-full sm:w-1/2">{item.value}</span>
                 </div>
               ))}
             </div>
 
             {/* Bottom Buttons */}
-            <div className="flex justify-center gap-6 pt-4">
+            <div className="flex flex-wrap justify-center gap-4 pt-4">
               <button className="flex items-center gap-2 text-[#39615F] px-4 py-2 rounded shadow hover:bg-[#39615F] hover:text-white border border-[#39615F]">
                 <img src={phone} alt="Call" className="w-5 h-5 bg-[#39615F]" />
                 Request To Call
@@ -85,10 +88,31 @@ const Product_template = () => {
                 Send Enquiry
               </button>
             </div>
-
           </div>
         </div>
+
+        {/* Dynamic Product Sections */}
+        {sections && (
+          <div className="mt-8 space-y-6 text-black pl-2 sm:pl-5">
+            {sections.map((section, index) => (
+              <div key={index}>
+                <h2 className="text-xl font-bold text-[#39615F] mb-2">{section.title}</h2>
+                {section.type === 'text' && <p className='w-full sm:w-3/4 text-justify'>{section.content}</p>}
+                {section.type === 'list' && (
+                  <ul className="list-disc list-inside space-y-1">
+                    {section.content.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
+      <p className='text-center mt-10 px-4'>To inquire about your selected product(s), simply tick the checkbox and click the <span className='text-[#39615F]'>"Send Inquiry"</span> button below.</p>
+      <div className='w-full flex items-center justify-center mt-4'><button className='rounded px-4 py-2 bg-[#39615F] text-white'>ENQUIRE NOW</button></div>
+      <EnquiryForm/>
     </div>
   );
 };
