@@ -15,7 +15,7 @@ const Footer = () => {
   }}
 >
   {/* 👇 Flex Container with Wrap */}
-  <div className="relative z-10 flex flex-wrap justify-center md:justify-center md:gap-60 items-center gap-6">
+  <div className="relative z-10 flex flex-wrap justify-center md:justify-center md:gap-10 items-center gap-6">
     
     {/* Logo */}
     <div className="flex-shrink-0 ">
@@ -27,9 +27,9 @@ const Footer = () => {
     </div>
 
     {/* Our Expertise Text */}
-    <div className="max-w-xl text-center md:text-center">
-      <h1 className="text-xl md:text-4xl mb-2 text-black font-inter">Our Expertise</h1>
-      <p className="text-sm md:text-base leading-relaxed text-black font-inter text-justify md:text-left">
+    <div className="md:max-w-4xl text-center md:text-center">
+      <h1 className="text-xl md:text-4xl mb-2 text-black font-bold" style={{fontFamily:"Inter"}}>Our Expertise</h1>
+      <p className="text-[#39615F] text-sm md:text-base leading-relaxed font-medium font-inter text-justify md:text-left">
         Specializing in precision engineering and gear manufacturing, Mukund Trans-gear delivers world-class
         products while supporting the 'Make in India' initiative. We combine innovation, quality, and
         craftsmanship to meet the diverse needs of industries worldwide.
@@ -67,7 +67,7 @@ const Footer = () => {
 
     {/* Contact Info */}
     <div className="md:w-1/3 text-center md:text-left">
-      <p className="text-lg font-semibold mb-1">Mukund Trans-Gears</p>
+      <p className="text-lg font-semibold mb-1" style={{fontFamily:"inter"}}>Mukund Trans-Gears</p>
       <p className="mb-1">V. M. Talwalkar</p>
       <p className="text-sm mb-2">
         F-44, M.I.D.C. Area, Kupwad Block, Kupwad, Sangli, Maharashtra - 416436, India

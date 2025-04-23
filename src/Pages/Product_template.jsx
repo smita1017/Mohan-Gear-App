@@ -7,6 +7,11 @@ import phone from '../assets/phone.png';
 import inuariry from '../assets/mail.png';
 import { extraDetails } from '../Pages/specification';
 import EnquiryForm from './EnquiryForm';
+import MachineParts from '../Pages/MachineParts';
+import img5 from '../assets/img5.png';
+import img6 from '../assets/img6.png';
+import img7 from '../assets/img7.png';
+import img8 from '../assets/img8.png';
 
 const Product_template = () => {
   const { id } = useParams();
@@ -22,7 +27,7 @@ const Product_template = () => {
     <div className='flex flex-col items-center gap-6 p-6 justify-center'>
       <div className='w-full'>
         <div className='flex flex-col sm:flex-row items-center justify-between'>
-          <h1 className="text-3xl text-center font-judson mb-4 w-full">
+          <h1 className="text-3xl text-center font-judson mb-4 w-full" style={{fontFamily:"judson"}}>
             {product.title}
           </h1>
           <img src={shareimg} alt="share icon" className='w-6 h-6' />
@@ -113,6 +118,41 @@ const Product_template = () => {
       <p className='text-center mt-10 px-4'>To inquire about your selected product(s), simply tick the checkbox and click the <span className='text-[#39615F]'>"Send Inquiry"</span> button below.</p>
       <div className='w-full flex items-center justify-center mt-4'><button className='rounded px-4 py-2 bg-[#39615F] text-white'>ENQUIRE NOW</button></div>
       <EnquiryForm/>
+      <div className='flex items-center justify-center w-full mt-4'><h1 className='text-3xl' style={{fontFamily:"jordon"}}>Explore More Products</h1></div>
+      <div>
+      <div className="flex flex-wrap justify-center gap-7 ">
+      <MachineParts
+        id={5}
+      img={img5}
+      title="Bevel Planetary Drives"
+      description="High-torque drives with advanced design."
+      Clickname="View More"
+     />
+     
+      <MachineParts
+        id={6}
+      img={img6}
+      title="Charging Pump"
+      description="Sturdy and efficient pumps for various industrial uses."
+      Clickname="View More"
+     />
+      <MachineParts
+        id={7}
+      img={img7}
+      title="Helical Gears"
+      description="High-speed gears with excellent load capacity."
+      Clickname="View More"
+     />
+      
+      <MachineParts
+        id={8}
+      img={img8}
+      title="Aluminium Timing Pulleys"
+      description="Lightweight, durable pulleys for smooth motion control."
+      Clickname="View More"
+     />
+   </div>
+      </div>
     </div>
   );
 };
